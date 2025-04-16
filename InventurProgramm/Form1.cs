@@ -30,8 +30,6 @@ namespace InventurProgramm {
                 MessageBox.Show(ex.Message);
                 return;
             }
-            labelVersion.Parent = this;
-            labelVersion.BackColor = Color.Transparent;
 
         }
 
@@ -261,7 +259,7 @@ namespace InventurProgramm {
         }
 
         private void changeAmountContextToolStripMenuItem_Click(object sender, EventArgs e) {
-
+            
         }
 
         private void changeItem(string item, string amount) {
