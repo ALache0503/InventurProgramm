@@ -30,7 +30,8 @@ namespace InventurProgramm {
                 MessageBox.Show(ex.Message);
                 return;
             }
-
+            labelVersion.BackColor = Color.Transparent;
+            labelVersion.Parent = this;
         }
 
 

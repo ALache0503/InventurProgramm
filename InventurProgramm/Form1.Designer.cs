@@ -42,6 +42,7 @@
             Column4 = new DataGridViewTextBoxColumn();
             contextMenuStrip1 = new ContextMenuStrip(components);
             changeAmountContextToolStripMenuItem = new ToolStripMenuItem();
+            labelVersion = new Label();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             contextMenuStrip1.SuspendLayout();
@@ -67,7 +68,7 @@
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(180, 22);
+            toolStripMenuItem2.Size = new Size(161, 22);
             toolStripMenuItem2.Text = "Dateipfad setzen";
             toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
@@ -81,21 +82,21 @@
             // itemEntfernenToolStripMenuItem
             // 
             itemEntfernenToolStripMenuItem.Name = "itemEntfernenToolStripMenuItem";
-            itemEntfernenToolStripMenuItem.Size = new Size(180, 22);
+            itemEntfernenToolStripMenuItem.Size = new Size(161, 22);
             itemEntfernenToolStripMenuItem.Text = "Item entfernen";
             itemEntfernenToolStripMenuItem.Click += itemEntfernenToolStripMenuItem_Click;
             // 
             // itemHinzufügenToolStripMenuItem
             // 
             itemHinzufügenToolStripMenuItem.Name = "itemHinzufügenToolStripMenuItem";
-            itemHinzufügenToolStripMenuItem.Size = new Size(180, 22);
+            itemHinzufügenToolStripMenuItem.Size = new Size(161, 22);
             itemHinzufügenToolStripMenuItem.Text = "Item hinzufügen";
             itemHinzufügenToolStripMenuItem.Click += itemHinzufügenToolStripMenuItem_Click;
             // 
             // mengeÄndernToolStripMenuItem
             // 
             mengeÄndernToolStripMenuItem.Name = "mengeÄndernToolStripMenuItem";
-            mengeÄndernToolStripMenuItem.Size = new Size(180, 22);
+            mengeÄndernToolStripMenuItem.Size = new Size(161, 22);
             mengeÄndernToolStripMenuItem.Text = "Menge ändern";
             mengeÄndernToolStripMenuItem.Click += mengeÄndernToolStripMenuItem_Click;
             // 
@@ -112,7 +113,7 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowTemplate.ReadOnly = true;
-            dataGridView1.Size = new Size(800, 411);
+            dataGridView1.Size = new Size(800, 407);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -147,20 +148,31 @@
             // 
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { changeAmountContextToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(181, 48);
+            contextMenuStrip1.Size = new Size(152, 26);
             // 
             // changeAmountContextToolStripMenuItem
             // 
             changeAmountContextToolStripMenuItem.Name = "changeAmountContextToolStripMenuItem";
-            changeAmountContextToolStripMenuItem.Size = new Size(180, 22);
+            changeAmountContextToolStripMenuItem.Size = new Size(151, 22);
             changeAmountContextToolStripMenuItem.Text = "Menge ändern";
             changeAmountContextToolStripMenuItem.Click += changeAmountContextToolStripMenuItem_Click;
+            // 
+            // labelVersion
+            // 
+            labelVersion.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            labelVersion.BackColor = SystemColors.Control;
+            labelVersion.Location = new Point(737, 436);
+            labelVersion.Name = "labelVersion";
+            labelVersion.Size = new Size(63, 15);
+            labelVersion.TabIndex = 2;
+            labelVersion.Text = "Version 1.0";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(labelVersion);
             Controls.Add(dataGridView1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
@@ -190,5 +202,6 @@
         private ToolStripMenuItem mengeÄndernToolStripMenuItem;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem changeAmountContextToolStripMenuItem;
+        private Label labelVersion;
     }
 }
