@@ -76,34 +76,6 @@ namespace InventurProgramm {
             readCSVFile(openFileDialog.FileName);
         }
 
-
-        private void changeValue(string item, int value) {
-            string tempFile = Path.GetTempFileName();
-            string editedLine = null;
-            string filePath = Properties.Settings.Default.CsvFilePath;
-
-            using (StreamReader reader = new StreamReader(filePath))
-            using (StreamWriter writer = new StreamWriter(tempFile)) {
-                string line;
-                while ((line = reader.ReadLine()) != null) {
-                    string[] values = line.Split(";");
-                    if (values[0].Equals(item, StringComparison.InvariantCultureIgnoreCase)) {
-                        values[1] = value.ToString();
-                        editedLine = string.Join(";", values);
-                        writer.WriteLine(editedLine);
-                    } else {
-                        writer.WriteLine(line);
-                    }
-                }
-                File.Copy(tempFile, filePath, true);
-                File.Delete(tempFile);
-
-                MessageBox.Show("Die Anzahl von " + item + "wurde auf " + value + "geändert");
-
-                reloadCSV();
-            }
-        }
-
         private void deleteRows() {
             while (dataGridView1.Rows.Count > 0) {
                 dataGridView1.Rows.RemoveAt(dataGridView1.Rows.Count - 1);
