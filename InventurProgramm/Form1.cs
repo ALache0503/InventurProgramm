@@ -60,7 +60,7 @@ namespace InventurProgramm {
 
         // method to open the File Explorer to allow the user to set a new path to a CSV file
         private void toolStripMenuItem2_Click(object sender, EventArgs e) {
-            // clearing the dataGrid first to prevent old and new data from appearing in dataGrid
+            // clearing the dataGrid first to prevent old and new data from mixing in dataGrid
             deleteRows();
 
             OpenFileDialog openFileDialog = new OpenFileDialog() {
