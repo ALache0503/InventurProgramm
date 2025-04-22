@@ -43,6 +43,8 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             changeAmountContextToolStripMenuItem = new ToolStripMenuItem();
             labelVersion = new Label();
+            labelFilter = new Label();
+            textBoxFilter = new TextBox();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             contextMenuStrip1.SuspendLayout();
@@ -108,12 +110,12 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
-            dataGridView1.Location = new Point(0, 27);
+            dataGridView1.Location = new Point(0, 55);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowTemplate.ReadOnly = true;
-            dataGridView1.Size = new Size(800, 407);
+            dataGridView1.Size = new Size(800, 379);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -167,11 +169,29 @@
             labelVersion.TabIndex = 2;
             labelVersion.Text = "Version 1.0";
             // 
+            // labelFilter
+            // 
+            labelFilter.AutoSize = true;
+            labelFilter.Location = new Point(652, 29);
+            labelFilter.Name = "labelFilter";
+            labelFilter.Size = new Size(36, 15);
+            labelFilter.TabIndex = 3;
+            labelFilter.Text = "Filter:";
+            // 
+            // textBoxFilter
+            // 
+            textBoxFilter.Location = new Point(694, 26);
+            textBoxFilter.Name = "textBoxFilter";
+            textBoxFilter.Size = new Size(100, 23);
+            textBoxFilter.TabIndex = 4;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBoxFilter);
+            Controls.Add(labelFilter);
             Controls.Add(labelVersion);
             Controls.Add(dataGridView1);
             Controls.Add(menuStrip1);
@@ -203,5 +223,7 @@
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem changeAmountContextToolStripMenuItem;
         private Label labelVersion;
+        private Label labelFilter;
+        private TextBox textBoxFilter;
     }
 }
